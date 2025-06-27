@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Découverte de Ouarzazate</title>
+  <title>Ouarzazate, la Perle Cinématographique du Sud</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #004d40;
+      --accent-color: #00796b;
+      --bg-light: #f5f7fa;
+      --text-color: #333;
+      --card-bg: #fff;
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      --radius: 14px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,66 +24,72 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f0f4f8;
-      color: #333;
+      background-color: var(--bg-light);
+      color: var(--text-color);
       padding: 2rem;
       line-height: 1.8;
     }
 
     h1, h2, h3, h4 {
-      color: #004d40;
-      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+      margin-bottom: 0.6rem;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-top: 2rem;
     }
 
     .card {
-      background-color: #fff;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      background-color: var(--card-bg);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
     }
 
     ul {
       list-style-type: disc;
-      padding-left: 1.5rem;
+      padding-left: 2rem;
+      margin-top: 1rem;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 1rem;
-      background-color: #fff;
-      border-radius: 8px;
+      background-color: var(--card-bg);
+      border-radius: var(--radius);
       overflow: hidden;
     }
 
     th, td {
       padding: 1rem;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     th {
-      background-color: #00796b;
+      background-color: var(--accent-color);
       color: white;
       text-align: left;
     }
 
     tr:hover {
-      background-color: #f1f1f1;
+      background-color: #f9f9f9;
     }
 
     a {
-      color: #00796b;
+      color: var(--accent-color);
       text-decoration: none;
       font-weight: 500;
     }
@@ -83,36 +99,41 @@
     }
 
     figure {
-      margin: 1rem 0;
+      margin: 2rem 0;
       text-align: center;
     }
 
     figure img {
-      max-width: 70%;
+      max-width: 85%;
       height: auto;
-      border-radius: 10px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
     figcaption {
       margin-top: 0.5rem;
       font-style: italic;
-      color: #555;
+      color: #666;
     }
 
     mark {
-      background-color: #ffe082;
-      padding: 0 0.2em;
+      background-color: #fff59d;
+      padding: 0 0.3em;
+      border-radius: 4px;
     }
 
     iframe {
       display: block;
-      margin: 1rem auto;
-      max-width: 100%;
+      margin: 1.5rem auto;
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
+      border-radius: var(--radius);
     }
 
     .links a {
-      display: block;
-      margin-top: 0.5rem;
+      display: inline-block;
+      margin-top: 0.6rem;
     }
 
     @media (max-width: 768px) {
@@ -121,8 +142,8 @@
       }
 
       iframe {
-        width: 100%;
         height: auto;
+        aspect-ratio: 16 / 9;
       }
 
       figure img {
@@ -134,54 +155,48 @@
 <body>
 
   <div class="card">
-    <h1>Bienvenue à la capitale du cinéma de Ouarzazate</h1>
-    <p>
-      
-    <p>
-      Ce site a été réalisé dans le cadre du module SIG.<br>
-      Projet encadré par <strong>M. Mehdi Essalami</strong> et réalisé par <strong>Hatim Nazih</strong>.
-    </p>
+    <h1>Bienvenue à Ouarzazate, Capitale Marocaine du Cinéma</h1>
+    <p>Ce site a été conçu dans le cadre du module SIG.<br>
+       Projet encadré par <strong>M. Mehdi Essalami</strong> et réalisé par <strong>Hatim Nazih</strong>.</p>
   </div>
 
   <div class="card">
-    <h2>La ville de Ouarzazate, Hollywood de l'afrique</h2>
-    <p>
-     Explorez les sites emblématiques de Ouarzazate à travers des cartes interactives et des guides touristiques inspirants.
-    </p>
+    <h2>Ouarzazate, le Hollywood de l’Afrique</h2>
+    <p>Plongez au cœur des décors mythiques de Ouarzazate grâce à des cartes interactives et des guides touristiques inspirants.</p>
   </div>
 
   <div class="card">
-    <h2>Lieux à visiter</h2>
+    <h2>Lieux Incontournables</h2>
     <ul>
       <li>Ksar Taourirt</li>
-      <li>Musée de cinéma</li>
+      <li>Musée du Cinéma</li>
       <li>Village Aït Ben Haddou</li>
-      <li>Complexe d'artisanat</li>
+      <li>Complexe d'Artisanat</li>
       <li>Place El Mouahiddine</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>Informations détaillées</h2>
+    <h2>Détails sur les Sites</h2>
 
     <h3>Ksar Taourirt</h3>
-    <p>Kasbah du 17ème siècle agrandie par la famille Glaoui.</p>
+    <p>Kasbah du XVIIe siècle, agrandie par la puissante famille Glaoui.</p>
 
-    <h3>Musée de cinéma</h3>
-    <p>Consacré aux films tournés à Ouarzazate, capitale du cinéma au Maroc.</p>
+    <h3>Musée du Cinéma</h3>
+    <p>Un hommage aux nombreux chefs-d'œuvre tournés dans la région.</p>
 
     <h3>Village Aït Ben Haddou</h3>
-    <p>Village fortifié classé au patrimoine mondial de l'UNESCO.</p>
+    <p>Site classé au patrimoine mondial de l’UNESCO, joyau de l’architecture amazighe.</p>
 
-    <h3>Complexe d'artisanat</h3>
-    <p>Espace valorisant le savoir-faire des artisans marocains.</p>
+    <h3>Complexe d'Artisanat</h3>
+    <p>Centre valorisant le savoir-faire ancestral des artisans locaux.</p>
 
     <h3>Place El Mouahiddine</h3>
-    <p>Lieu de rassemblement proche de la médiathèque et du centre commercial Tiflite.</p>
+    <p>Lieu de vie populaire proche de la médiathèque et du centre commercial Tiflite.</p>
   </div>
 
   <div class="card">
-    <h2>Tableau récapitulatif</h2>
+    <h2>Tableau Récapitulatif</h2>
     <table>
       <thead>
         <tr>
@@ -197,7 +212,7 @@
           <td>Monument historique</td>
         </tr>
         <tr>
-          <td>Musée de cinéma</td>
+          <td>Musée du Cinéma</td>
           <td>1 026</td>
           <td>Foire des films internationaux</td>
         </tr>
@@ -207,60 +222,51 @@
           <td>Symbole de la culture amazighe</td>
         </tr>
         <tr>
-          <td>Complexe d'artisanat</td>
+          <td>Complexe d'Artisanat</td>
           <td>1 021</td>
-          <td>Espace des artisans marocains</td>
+          <td>Vitrine de l'artisanat marocain</td>
         </tr>
         <tr>
           <td>Place El Mouahiddine</td>
           <td>1 826</td>
-          <td>Rassemblement des habitants</td>
+          <td>Centre de rencontre communautaire</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- ✅ NEW SECTION: Video + Gallery -->
   <div class="card">
-    <h2>Découverte Ouarzazate Par Drone</h2>
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/YDzQdCeNq7Y?si=NdQEag-IumXK6Xpl"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
+    <h2>Ouarzazate Vue du Ciel</h2>
+    <iframe src="https://www.youtube.com/embed/YDzQdCeNq7Y?si=NdQEag-IumXK6Xpl" title="Découverte de Ouarzazate par drone" allowfullscreen></iframe>
   </div>
 
   <div class="card">
-    <h2>Images des lieux à visiter à la ville de Ouarzazate</h2>
+    <h2>Galerie d’Images</h2>
 
     <figure>
       <img src="Kasba-ait-benhaddou.jpeg" alt="Village Aït Ben Haddou">
-      <figcaption><mark>Entree Ouarzazate</mark></figcaption>
+      <figcaption><mark>Entrée de Ouarzazate</mark></figcaption>
     </figure>
 
     <figure>
-      <img src="images/musee-du-cinema-ouarzazate-au-maroc-2pffy5w.jpg" alt="Musée de cinéma">
-      <figcaption><mark>Musée de cinéma</mark></figcaption>
+      <img src="images/musee-du-cinema-ouarzazate-au-maroc-2pffy5w.jpg" alt="Musée du Cinéma">
+      <figcaption><mark>Musée du Cinéma</mark></figcaption>
     </figure>
 
-
     <figure>
-      <img src="images/ouarzazate.jpg" alt="Complexe d'artisanat">
-      <figcaption><mark>Kasbah Ait ben haddou</mark></figcaption>
+      <img src="images/ouarzazate.jpg" alt="Kasbah Aït Ben Haddou">
+      <figcaption><mark>Kasbah Aït Ben Haddou</mark></figcaption>
     </figure>
 
     <figure>
       <img src="images/la-place-animee-al-mouahidine-dans-lapres-midi-ouarzazate.jpg" alt="Place El Mouahiddine">
-      <figcaption><mark>Kasbah Ait ben haddou</mark></figcaption>
+      <figcaption><mark>Place El Mouahiddine</mark></figcaption>
     </figure>
   </div>
 
   <div class="card links">
-    <h4>Liens utiles</h4>
-    <a href="https://fr.wikipedia.org/wiki/Ouarzazate" target="_blank">Wikipedia: Ouarzazate</a>
-    
+    <h4>Liens Utiles</h4>
+    <a href="https://fr.wikipedia.org/wiki/Ouarzazate" target="_blank">→ Wikipédia : Ouarzazate</a>
   </div>
 
 </body>
