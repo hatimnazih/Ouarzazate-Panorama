@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>G-omètre Topographe</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    canvas {
+      border: 2px solid #2c3e50;
+      background-color: #fff;
+      margin-top: 20px;
+      cursor: crosshair;
+    }
+
+    .controls {
+      margin-top: 20px;
+    }
+
+    .controls input[type="range"] {
+      width: 200px;
+    }
+
+    button {
+      background-color: #3498db;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>G‑omètre Topographe</h1>
+  
+  <canvas id="canvas" width="500" height="400"></canvas>
+
+  <div class="controls">
+    <label for="radius">Radius: </label>
+    <input type="range" id="radius" min="10" max="200" value="50">
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const radiusSlider = document.getElementById('radius');
+    const clearBtn = document.getElementById('clearBtn');
+
+    let radius = parseInt(radiusSlider.value);
+    let points = [];
+
+    canvas.addEventListener('click', function(e) {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      points.push({ x, y, r: radius });
+      drawAll();
+    });
+
+    radiusSlider.addEventListener('input', function() {
+      radius = parseInt(this.value);
+    });
+
+    clearBtn.addEventListener('click', function() {
+      points = [];
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    function drawAll() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      points.forEach(pt => {
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, pt.r, 0, 2 * Math.PI);
+        ctx.strokeStyle = '#34495e';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      });
+    }
+  </script>
+
+</body>
+</html>
