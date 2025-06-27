@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ouarzazate, la Perle Cinématographique du Sud</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary-color: #004d40;
-      --accent-color: #00796b;
-      --bg-light: #f5f7fa;
-      --text-color: #333;
-      --card-bg: #fff;
-      --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-      --radius: 14px;
+      --color-primary: #004d40;
+      --color-accent: #ff9800;
+      --color-secondary: #f57c00;
+      --color-bg: #fefaf6;
+      --color-bg-alt: #fff3e0;
+      --color-text: #333;
+      --color-sand: #fbe9e7;
+      --color-oasis: #e0f7fa;
+      --color-sunset: #ffe0b2;
+      --card-radius: 16px;
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
     }
 
     * {
@@ -24,72 +28,82 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-color);
+      background: linear-gradient(to right, #fdfcfb, #f3f3f3);
+      color: var(--color-text);
       padding: 2rem;
       line-height: 1.8;
     }
 
     h1, h2, h3, h4 {
-      color: var(--primary-color);
+      color: var(--color-primary);
       margin-bottom: 0.6rem;
     }
 
     h1 {
       font-size: 2.8rem;
-      margin-bottom: 1rem;
+      font-weight: 700;
     }
 
     h2 {
       font-size: 2.2rem;
-      margin-top: 2rem;
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+
+    h3 {
+      color: var(--color-secondary);
+      font-weight: 500;
     }
 
     .card {
-      background-color: var(--card-bg);
+      background: linear-gradient(145deg, var(--color-bg), #ffffff);
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow);
       padding: 2rem;
       margin-bottom: 2rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
 
     ul {
-      list-style-type: disc;
+      list-style-type: square;
       padding-left: 2rem;
       margin-top: 1rem;
+      color: var(--color-primary);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 1rem;
-      background-color: var(--card-bg);
-      border-radius: var(--radius);
+      background-color: #fff;
+      border-radius: var(--card-radius);
       overflow: hidden;
-    }
-
-    th, td {
-      padding: 1rem;
-      border-bottom: 1px solid #e0e0e0;
+      box-shadow: var(--shadow);
     }
 
     th {
-      background-color: var(--accent-color);
+      background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
       color: white;
+      padding: 1rem;
       text-align: left;
     }
 
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
     tr:hover {
-      background-color: #f9f9f9;
+      background-color: var(--color-oasis);
     }
 
     a {
-      color: var(--accent-color);
+      color: var(--color-accent);
       text-decoration: none;
       font-weight: 500;
     }
@@ -106,19 +120,24 @@
     figure img {
       max-width: 85%;
       height: auto;
-      border-radius: var(--radius);
+      border-radius: var(--card-radius);
       box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    figure img:hover {
+      transform: scale(1.03);
     }
 
     figcaption {
       margin-top: 0.5rem;
       font-style: italic;
-      color: #666;
+      color: #777;
     }
 
     mark {
-      background-color: #fff59d;
-      padding: 0 0.3em;
+      background-color: var(--color-sunset);
+      padding: 0.3em;
       border-radius: 4px;
     }
 
@@ -128,12 +147,22 @@
       width: 100%;
       max-width: 720px;
       height: 405px;
-      border-radius: var(--radius);
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow);
+    }
+
+    .links {
+      background-color: var(--color-sand);
     }
 
     .links a {
       display: inline-block;
       margin-top: 0.6rem;
+      color: var(--color-primary);
+    }
+
+    .links a:hover {
+      color: var(--color-accent);
     }
 
     @media (max-width: 768px) {
@@ -162,9 +191,8 @@
 
   <div class="card">
     <h2>Aperçu géographique et historique</h2>
-    <p>Ouarzazate est située à environ 1 160 m d’altitude, au carrefour des vallées du Drâa et du Dadès, juste au sud du Haut-Atlas, sur un vaste plateau semi-désertique. 
-      Initialement un petit poste caravanier pour les échanges avec le Sahara, elle devient une garnison française en 1928, puis s'affirme comme centre administratif après l’indépendance 
-</p>
+    <p>Ouarzazate est située à environ 1 160 m d’altitude, au carrefour des vallées du Drâa et du Dadès. 
+      Elle fut un carrefour caravaniers, une garnison coloniale, et est aujourd’hui un joyau touristique du sud marocain.</p>
   </div>
 
   <div class="card">
@@ -182,19 +210,19 @@
     <h2>Détails sur les Sites</h2>
 
     <h3>Ksar Taourirt</h3>
-    <p>Kasbah du XVIIe siècle, agrandie par la puissante famille Glaoui.</p>
+    <p>Kasbah historique du XVIIe siècle, emblème de l’architecture en pisé de la région.</p>
 
     <h3>Musée du Cinéma</h3>
-    <p>Un hommage aux nombreux chefs-d'œuvre tournés dans la région.</p>
+    <p>Temple dédié aux films internationaux tournés dans les studios voisins.</p>
 
     <h3>Village Aït Ben Haddou</h3>
-    <p>Site classé au patrimoine mondial de l’UNESCO, joyau de l’architecture amazighe.</p>
+    <p>Classé au patrimoine mondial de l’UNESCO, connu pour son apparence dans de nombreux films.</p>
 
     <h3>Complexe d'Artisanat</h3>
-    <p>Centre valorisant le savoir-faire ancestral des artisans locaux.</p>
+    <p>Lieu vivant mettant en avant le savoir-faire marocain (cuir, poterie, tapis).</p>
 
     <h3>Place El Mouahiddine</h3>
-    <p>Lieu de vie populaire proche de la médiathèque et du centre commercial Tiflite.</p>
+    <p>Cœur battant de la ville, espace de rencontre et d’activités sociales.</p>
   </div>
 
   <div class="card">
@@ -247,22 +275,22 @@
 
     <figure>
       <img src="Ait Benhaddou.jpeg" alt="Village Aït Ben Haddou">
-      <figcaption><mark>Kabah Ait Ben Haddou</mark></figcaption>
+      <figcaption><mark>Aït Ben Haddou</mark></figcaption>
     </figure>
 
     <figure>
       <img src="CLA-studios.jpeg" alt="Musée du Cinéma">
-      <figcaption><mark>CLA Oscar Studios</mark></figcaption>
+      <figcaption><mark>Studios de Cinéma CLA</mark></figcaption>
     </figure>
 
     <figure>
-      <img src="al mouahidine.jpg" alt="Kasbah Aït Ben Haddou">
-      <figcaption><mark>Place Al Moahedine</mark></figcaption>
+      <img src="al mouahidine.jpg" alt="Place El Mouahiddine">
+      <figcaption><mark>Place El Mouahiddine</mark></figcaption>
     </figure>
 
     <figure>
-      <img src="kasba-taourirt.jpeg" alt="Place El Mouahiddine">
-      <figcaption><mark>Kasbaht Taourirt</mark></figcaption>
+      <img src="kasba-taourirt.jpeg" alt="Ksar Taourirt">
+      <figcaption><mark>Ksar Taourirt</mark></figcaption>
     </figure>
   </div>
 
