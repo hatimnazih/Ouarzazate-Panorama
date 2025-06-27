@@ -1,106 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>G-omètre Topographe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ville de Ouarzazate</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
     }
-
-    h1 {
-      color: #2c3e50;
+    h1, h2, h3, h4 {
+      color: #004d40;
     }
-
-    canvas {
-      border: 2px solid #2c3e50;
-      background-color: #fff;
-      margin-top: 20px;
-      cursor: crosshair;
+    ul {
+      list-style-type: disc;
+      margin-left: 2em;
     }
-
-    .controls {
-      margin-top: 20px;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
     }
-
-    .controls input[type="range"] {
-      width: 200px;
+    table, th, td {
+      border: 1px solid #999;
     }
-
-    button {
-      background-color: #3498db;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      margin-left: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease;
+    th, td {
+      padding: 8px;
+      text-align: left;
     }
-
-    button:hover {
-      background-color: #2980b9;
+    a {
+      color: #00796b;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <h1>G‑omètre Topographe</h1>
-  
-  <canvas id="canvas" width="500" height="400"></canvas>
+  <h1>Bienvenue à la ville touristique de Ouarzazate</h1>
 
-  <div class="controls">
-    <label for="radius">Radius: </label>
-    <input type="range" id="radius" min="10" max="200" value="50">
-    <button id="clearBtn">Clear</button>
-  </div>
+  <h2>La ville de Ouarzazate, Capitale de cinéma</h2>
 
-  <script>
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    const radiusSlider = document.getElementById('radius');
-    const clearBtn = document.getElementById('clearBtn');
+  <p>
+    Voilà notre site web réalisé dans le cadre du module de SIG.<br>
+    Ce travail est encadré par M. Mehdi Essalami et réalisé par Ismail Elmakkaoui.<br>
+    Vous allez trouver ici toutes les informations concernant les lieux à visiter dans la ville de Ouarzazate,
+    pour la création des cartes touristiques et le guide touristique de Ouarzazate.
+  </p>
 
-    let radius = parseInt(radiusSlider.value);
-    let points = [];
+  <h2>Voici les lieux à visiter à Ouarzazate :</h2>
+  <ul>
+    <li>Ksar Taourirt</li>
+    <li>Musée de cinéma</li>
+    <li>Village Aït Ben Haddou</li>
+    <li>Complexe d'artisanat</li>
+    <li>Place El Mouahiddine</li>
+  </ul>
 
-    canvas.addEventListener('click', function(e) {
-      const rect = canvas.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+  <h2>Informations sur les lieux à visiter</h2>
 
-      points.push({ x, y, r: radius });
-      drawAll();
-    });
+  <h3>Ksar Taourirt</h3>
+  <p>La Kasbah de Taourirt a été construite au 17ème siècle. Son agrandissement et sa restructuration ont été réalisés par la famille Glaoui.</p>
 
-    radiusSlider.addEventListener('input', function() {
-      radius = parseInt(this.value);
-    });
+  <h3>Musée de cinéma</h3>
+  <p>Le musée du cinéma de Ouarzazate retrace l'histoire des grands films tournés au cœur de la ville et ceux qui ont fait sa renommée internationale.</p>
 
-    clearBtn.addEventListener('click', function() {
-      points = [];
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-    });
+  <h3>Village Aït Ben Haddou</h3>
+  <p>Le ksar Aït Ben Haddou est un village fortifié qui constitue le symbole de la culture amazighe et de l'architecture en terre au sud-est du Maroc.</p>
 
-    function drawAll() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      points.forEach(pt => {
-        ctx.beginPath();
-        ctx.arc(pt.x, pt.y, pt.r, 0, 2 * Math.PI);
-        ctx.strokeStyle = '#34495e';
-        ctx.lineWidth = 2;
-        ctx.stroke();
-      });
-    }
-  </script>
+  <h3>Complexe d'artisanat</h3>
+  <p>Le complexe de l’artisanat de Ouarzazate est une structure pour la valorisation du savoir-faire de l’artisan marocain.</p>
+
+  <h3>Place El Mouahiddine</h3>
+  <p>La place Almouahiddine se trouve à proximité de la Médiathèque de Ouarzazate et du centre commercial Tiflite.</p>
+
+  <h2>Tableau des lieux</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Surface (m²)</th>
+        <th>Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ksar Taourirt</td>
+        <td>10 562</td>
+        <td>Monument historique</td>
+      </tr>
+      <tr>
+        <td>Musée de cinéma</td>
+        <td>1 026</td>
+        <td>Foire des films internationaux</td>
+      </tr>
+      <tr>
+        <td>Village Aït Ben Haddou</td>
+        <td>11 005</td>
+        <td>Symbole de la culture amazighe</td>
+      </tr>
+      <tr>
+        <td>Complexe d'artisanat</td>
+        <td>1 021</td>
+        <td>Espace des artisans marocains</td>
+      </tr>
+      <tr>
+        <td>Place Almouahiddine</td>
+        <td>1 826</td>
+        <td>Point de rassemblement des habitants</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Découverte de Ouarzazate par drone</h2>
+  <p>(Vidéo ou carte interactive non incluse ici, mais disponible sur le site original.)</p>
+
+  <h2>Images des lieux</h2>
+  <ul>
+    <li>Fig 1: Ksar Taourirt</li>
+    <li>Fig 2: Musée de cinéma</li>
+    <li>Fig 3: Village de Aït Ben Haddou</li>
+    <li>Fig 4: Complexe d'artisanat</li>
+    <li>Fig 5: Place El Mouahiddine</li>
+  </ul>
+
+  <h4>Liens utiles</h4>
+  <ul>
+    <li><a href="https://fr.wikipedia.org/wiki/Ouarzazate" target="_blank">Plus d'informations sur Ouarzazate (Wikipedia)</a></li>
+    <li><a href="#">Afficher le Guide</a></li>
+    <li><a href="#">Afficher la carte interactive</a></li>
+  </ul>
 
 </body>
 </html>
