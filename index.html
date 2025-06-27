@@ -16,11 +16,6 @@
       --color-sunset: #ffe0b2;
       --card-radius: 16px;
       --shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-
-      --bg-light: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 35%, #ffb74d 70%, #ffe0b2 100%),
-                  radial-gradient(circle at top right, #ffe082 0%, transparent 70%);
-      --bg-dark: linear-gradient(145deg, #263238 0%, #37474f 100%);
-      --text-dark: #f1f1f1;
     }
 
     * {
@@ -31,44 +26,17 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--bg-light);
-      background-blend-mode: overlay;
+      background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 35%, #ffb74d 70%, #ffe0b2 100%);
       color: var(--color-text);
       padding: 2rem;
       line-height: 1.8;
-      transition: all 0.5s ease;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    body.dark {
-      background: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: var(--color-accent);
-      color: white;
-      border: none;
-      border-radius: 25px;
-      padding: 0.6rem 1.2rem;
-      font-weight: bold;
-      box-shadow: var(--shadow);
-      cursor: pointer;
-      transition: background 0.3s;
-      z-index: 999;
-    }
-
-    .theme-toggle:hover {
-      background: var(--color-secondary);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     h1, h2, h3, h4 {
       margin-bottom: 0.6rem;
-      transition: color 0.4s;
     }
 
     h1 {
@@ -94,11 +62,7 @@
       box-shadow: var(--shadow);
       padding: 2rem;
       margin-bottom: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s;
-    }
-
-    body.dark .card {
-      background: #37474f;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
@@ -123,11 +87,6 @@
       box-shadow: var(--shadow);
     }
 
-    body.dark table {
-      background-color: #455a64;
-      color: white;
-    }
-
     th {
       background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
       color: white;
@@ -142,10 +101,6 @@
 
     tr:hover {
       background-color: var(--color-oasis);
-    }
-
-    body.dark tr:hover {
-      background-color: #546e7a;
     }
 
     a {
@@ -230,10 +185,6 @@
   </style>
 </head>
 <body>
-
-  <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">
-    🎨 Changer de thème
-  </button>
 
   <div class="card">
     <h1>Bienvenue à Ouarzazate, Capitale Marocaine du Cinéma</h1>
@@ -324,6 +275,7 @@
 
   <div class="card">
     <h2>Galerie d’Images</h2>
+
     <figure>
       <img src="Ait Benhaddou.jpeg" alt="Village Aït Ben Haddou">
       <figcaption><mark>Aït Ben Haddou</mark></figcaption>
@@ -349,8 +301,8 @@
     <h4>Liens Utiles</h4>
     <a href="https://fr.wikipedia.org/wiki/Ouarzazate" target="_blank">→ Wikipédia : Ouarzazate</a>
 
-    <h4>Carte Interactive</h4>
-    <a href="carte-interactive.html" target="_blank"> Ouarzazate</a>
+     <h4>Carte Interactive</h4>
+    <a href="carte-interactive.html" target="_blank">Ouarzazate</a>
   </div>
 
 </body>
