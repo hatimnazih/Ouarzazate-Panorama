@@ -3,135 +3,268 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ville de Ouarzazate</title>
+  <title>Découverte de Ouarzazate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2em;
-      background-color: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      padding: 2rem;
+      line-height: 1.8;
+    }
+
     h1, h2, h3, h4 {
       color: #004d40;
+      margin-bottom: 0.5rem;
     }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
     ul {
       list-style-type: disc;
-      margin-left: 2em;
+      padding-left: 1.5rem;
     }
+
     table {
-      border-collapse: collapse;
       width: 100%;
-      margin-top: 1em;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
     }
-    table, th, td {
-      border: 1px solid #999;
-    }
+
     th, td {
-      padding: 8px;
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #00796b;
+      color: white;
       text-align: left;
     }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
     a {
       color: #00796b;
       text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    figure {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    figure img {
+      max-width: 70%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    mark {
+      background-color: #ffe082;
+      padding: 0 0.2em;
+    }
+
+    iframe {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+    }
+
+    .links a {
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+
+      figure img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Bienvenue à la ville touristique de Ouarzazate</h1>
+  <div class="card">
+    <h1>Bienvenue à la ville touristique de Ouarzazate</h1>
+    <p>
+      Ce site a été réalisé dans le cadre du module SIG.<br>
+      Projet encadré par <strong>M. Mehdi Essalami</strong> et réalisé par <strong>Ismail Elmakkaoui</strong>.
+    </p>
+  </div>
 
-  <h2>La ville de Ouarzazate, Capitale de cinéma</h2>
+  <div class="card">
+    <h2>La ville de Ouarzazate, Capitale de cinéma</h2>
+    <p>
+      Découvrez les lieux emblématiques de Ouarzazate pour la création de cartes touristiques et guides de voyage.
+    </p>
+  </div>
 
-  <p>
-    Voilà notre site web réalisé dans le cadre du module de SIG.<br>
-    Ce travail est encadré par M. Mehdi Essalami et réalisé par Ismail Elmakkaoui.<br>
-    Vous allez trouver ici toutes les informations concernant les lieux à visiter dans la ville de Ouarzazate,
-    pour la création des cartes touristiques et le guide touristique de Ouarzazate.
-  </p>
+  <div class="card">
+    <h2>Lieux à visiter</h2>
+    <ul>
+      <li>Ksar Taourirt</li>
+      <li>Musée de cinéma</li>
+      <li>Village Aït Ben Haddou</li>
+      <li>Complexe d'artisanat</li>
+      <li>Place El Mouahiddine</li>
+    </ul>
+  </div>
 
-  <h2>Voici les lieux à visiter à Ouarzazate :</h2>
-  <ul>
-    <li>Ksar Taourirt</li>
-    <li>Musée de cinéma</li>
-    <li>Village Aït Ben Haddou</li>
-    <li>Complexe d'artisanat</li>
-    <li>Place El Mouahiddine</li>
-  </ul>
+  <div class="card">
+    <h2>Informations détaillées</h2>
 
-  <h2>Informations sur les lieux à visiter</h2>
+    <h3>Ksar Taourirt</h3>
+    <p>Kasbah du 17ème siècle agrandie par la famille Glaoui.</p>
 
-  <h3>Ksar Taourirt</h3>
-  <p>La Kasbah de Taourirt a été construite au 17ème siècle. Son agrandissement et sa restructuration ont été réalisés par la famille Glaoui.</p>
+    <h3>Musée de cinéma</h3>
+    <p>Consacré aux films tournés à Ouarzazate, capitale du cinéma au Maroc.</p>
 
-  <h3>Musée de cinéma</h3>
-  <p>Le musée du cinéma de Ouarzazate retrace l'histoire des grands films tournés au cœur de la ville et ceux qui ont fait sa renommée internationale.</p>
+    <h3>Village Aït Ben Haddou</h3>
+    <p>Village fortifié classé au patrimoine mondial de l'UNESCO.</p>
 
-  <h3>Village Aït Ben Haddou</h3>
-  <p>Le ksar Aït Ben Haddou est un village fortifié qui constitue le symbole de la culture amazighe et de l'architecture en terre au sud-est du Maroc.</p>
+    <h3>Complexe d'artisanat</h3>
+    <p>Espace valorisant le savoir-faire des artisans marocains.</p>
 
-  <h3>Complexe d'artisanat</h3>
-  <p>Le complexe de l’artisanat de Ouarzazate est une structure pour la valorisation du savoir-faire de l’artisan marocain.</p>
+    <h3>Place El Mouahiddine</h3>
+    <p>Lieu de rassemblement proche de la médiathèque et du centre commercial Tiflite.</p>
+  </div>
 
-  <h3>Place El Mouahiddine</h3>
-  <p>La place Almouahiddine se trouve à proximité de la Médiathèque de Ouarzazate et du centre commercial Tiflite.</p>
+  <div class="card">
+    <h2>Tableau récapitulatif</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Surface (m²)</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ksar Taourirt</td>
+          <td>10 562</td>
+          <td>Monument historique</td>
+        </tr>
+        <tr>
+          <td>Musée de cinéma</td>
+          <td>1 026</td>
+          <td>Foire des films internationaux</td>
+        </tr>
+        <tr>
+          <td>Village Aït Ben Haddou</td>
+          <td>11 005</td>
+          <td>Symbole de la culture amazighe</td>
+        </tr>
+        <tr>
+          <td>Complexe d'artisanat</td>
+          <td>1 021</td>
+          <td>Espace des artisans marocains</td>
+        </tr>
+        <tr>
+          <td>Place El Mouahiddine</td>
+          <td>1 826</td>
+          <td>Rassemblement des habitants</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <h2>Tableau des lieux</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Nom</th>
-        <th>Surface (m²)</th>
-        <th>Information</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Ksar Taourirt</td>
-        <td>10 562</td>
-        <td>Monument historique</td>
-      </tr>
-      <tr>
-        <td>Musée de cinéma</td>
-        <td>1 026</td>
-        <td>Foire des films internationaux</td>
-      </tr>
-      <tr>
-        <td>Village Aït Ben Haddou</td>
-        <td>11 005</td>
-        <td>Symbole de la culture amazighe</td>
-      </tr>
-      <tr>
-        <td>Complexe d'artisanat</td>
-        <td>1 021</td>
-        <td>Espace des artisans marocains</td>
-      </tr>
-      <tr>
-        <td>Place Almouahiddine</td>
-        <td>1 826</td>
-        <td>Point de rassemblement des habitants</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- ✅ NEW SECTION: Video + Gallery -->
+  <div class="card">
+    <h2>Découverte Ouarzazate Par Drone</h2>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/YDzQdCeNq7Y?si=NdQEag-IumXK6Xpl"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-  <h2>Découverte de Ouarzazate par drone</h2>
-  <p>(Vidéo ou carte interactive non incluse ici, mais disponible sur le site original.)</p>
+  <div class="card">
+    <h2>Images des lieux à visiter à la ville de Ouarzazate</h2>
 
-  <h2>Images des lieux</h2>
-  <ul>
-    <li>Fig 1: Ksar Taourirt</li>
-    <li>Fig 2: Musée de cinéma</li>
-    <li>Fig 3: Village de Aït Ben Haddou</li>
-    <li>Fig 4: Complexe d'artisanat</li>
-    <li>Fig 5: Place El Mouahiddine</li>
-  </ul>
+    <figure>
+      <img src="images/pngtree-ait-ben-haddou-the-stronghold-town-in-ouarzazate-morocco-photo-png-image_14762909.png" alt="Ksar Taourirt">
+      <figcaption><mark>FIG 1: Ksar Taourirt</mark></figcaption>
+    </figure>
 
-  <h4>Liens utiles</h4>
-  <ul>
-    <li><a href="https://fr.wikipedia.org/wiki/Ouarzazate" target="_blank">Plus d'informations sur Ouarzazate (Wikipedia)</a></li>
-    <li><a href="#">Afficher le Guide</a></li>
-    <li><a href="#">Afficher la carte interactive</a></li>
-  </ul>
+    <figure>
+      <img src="images/musee-du-cinema-ouarzazate-au-maroc-2pffy5w.jpg" alt="Musée de cinéma">
+      <figcaption><mark>FIG 2: Musée de cinéma</mark></figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/ait-ben-haddou.jpg" alt="Village Aït Ben Haddou">
+      <figcaption><mark>FIG 3: Village de Aït Ben Haddou</mark></figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/ouarzazate.jpg" alt="Complexe d'artisanat">
+      <figcaption><mark>FIG 4: Complexe d'artisanat</mark></figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/la-place-animee-al-mouahidine-dans-lapres-midi-ouarzazate.jpg" alt="Place El Mouahiddine">
+      <figcaption><mark>FIG 5: Place El Mouahiddine</mark></figcaption>
+    </figure>
+  </div>
+
+  <div class="card links">
+    <h4>Liens utiles</h4>
+    <a href="https://fr.wikipedia.org/wiki/Ouarzazate" target="_blank">Wikipedia: Ouarzazate</a>
+    <a href="#">Afficher le guide touristique</a>
+    <a href="#">Carte interactive</a>
+  </div>
 
 </body>
 </html>
